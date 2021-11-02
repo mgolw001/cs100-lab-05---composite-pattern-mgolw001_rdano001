@@ -5,7 +5,7 @@
 
 class SevenOPMock : public Base {
     public:
-        SevenOpMock() { }
+        SevenOPMock() { }
         virtual double evaluate() { return 7.5; }
         virtual std::string stringify() { return "7.5"; }
 };
