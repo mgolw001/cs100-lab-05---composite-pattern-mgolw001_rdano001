@@ -10,4 +10,4 @@ class ZeroOPMock : public Base {
         virtual std::string stringify() { return "0.0"; }
 };
 
-#endif _
+#endif 
