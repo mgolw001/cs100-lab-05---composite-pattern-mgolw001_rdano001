@@ -6,8 +6,8 @@
 class Pow : public Base {
     public:
         Pow();
-        virtual double evaluate(){ pow("leftOP".evaulate(),"rightOP".evaluate()); } //placeholder
-        virtual std::string stringify() { "LeftOP".stringify() + " ** " + "RightOP".stringify(); }//placeholder
+        virtual double evaluate(){0.0; } //placeholder
+        virtual std::string stringify() { " ** " ; }//placeholder
 };
 
 #endif 
