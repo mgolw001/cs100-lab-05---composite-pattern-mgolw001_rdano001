@@ -5,7 +5,7 @@
 
 class ZeroOPMock : public Base {
     public:
-        ZeroOPMock() { }
+        ZeroOPMock();
         virtual double evaluate() { return 0.0; }
         virtual std::string stringify() { return "0.0"; }
 };
