@@ -6,8 +6,8 @@
 class Div : public Base {
     public:
         Div();
-        virtual double evaluate(){0.0;} //placeholder
-        virtual std::string stringify() { "/"; }//placeholder
+        virtual double evaluate(){"leftop".evaluate()/"rightop".evaulate();} //placeholder
+        virtual std::string stringify() { "( " + "leftOp".stringify() + " / " + "rightOp".stringify() + " )" ; }//placeholder
 };
 
 #endif 
