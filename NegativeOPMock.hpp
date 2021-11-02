@@ -10,4 +10,4 @@ class NegativeOPMock : public Base {
         virtual std::string stringify() { return "-1.5"; }
 };
 
-#endif _
+#endif 
