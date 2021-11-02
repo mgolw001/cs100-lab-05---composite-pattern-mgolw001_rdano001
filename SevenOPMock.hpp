@@ -10,4 +10,4 @@ class SevenOPMock : public Base {
         virtual std::string stringify() { return "7.5"; }
 };
 
-#endif _
+#endif 
