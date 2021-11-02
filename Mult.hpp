@@ -10,4 +10,4 @@ class Mult : public Base {
         virtual std::string stringify() { "*"; }//placeholder
 };
 
-#endif _
+#endif 
