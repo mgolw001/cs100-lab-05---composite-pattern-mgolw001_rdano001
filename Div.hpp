@@ -2,12 +2,15 @@
 #define __DIV_HPP__
 
 #include "base.hpp"
-
-class Div : public Base {
+#include "op.hpp"
+class Div : public Base : public Op {
     public:
-        Div();
-        virtual double evaluate(){"leftoperand".evalutate()/"rightoperand".evaluate();} //placeholder
-        virtual std::string stringify() {"( " << "leftoperand".stringify()<< "/" << "rightoperand".stringify()>>" )"; }//placeholder
+        Div(Op,Op);
+        virtual double evaluate(){leftOP.evalutate()/rightOP.evaluate();}
+        virtual std::string stringify() {"( " << leftOP.stringify()<< "/" << rightOP.stringify()>>" )"; }
+    private:
+	Op leftOP;
+	Op rightOP;
 };
 
 #endif 
