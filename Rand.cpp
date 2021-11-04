@@ -1,10 +1,14 @@
 #include "Rand.hpp"
-
+#include <string>
 Rand::Rand(){
 	srand(time(NULL));
 	double randOperand = rand()%100;
-	//unfinished
-	//untested
+	val = randOperand;
+}
+
+std::string Rand::stringify(){
+	string s = to_string(val);
+	return s;
 }
 
 
