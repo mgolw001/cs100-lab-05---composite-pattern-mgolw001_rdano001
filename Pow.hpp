@@ -4,11 +4,13 @@
 #include "base.hpp"
 #include "math.h"
 #include "op.hpp"
+#include <string>
+
 class Pow : public Base : public Op {
     public:
         Pow(Op,Op);
-        virtual double evaluate(){pow(leftOP.evaluate(),rightOP.evaluate());} //placeholder
-        virtual std::string stringify() {"( " << leftOP.stringify() << "**" << rightOP.stringify() << " )" ; }//placeholder
+        double evaluate(){pow(leftOP.evaluate(),rightOP.evaluate());} 
+        std::string stringify();
     private:
         Op leftOP;
         Op rightOP;
