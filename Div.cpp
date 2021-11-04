@@ -1,4 +1,5 @@
+#include "Div.hpp"
 Div::Div(Op lop, Op rop){
-	leftOp = lop;
-	rightOp = rop;
+	leftOP = lop;
+	rightOP = rop;
 }
