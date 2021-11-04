@@ -3,11 +3,12 @@
 
 #include "base.hpp"
 #include "op.hpp"
+#include <string>
 class Div : public Base : public Op {
     public:
         Div(Op,Op);
-        virtual double evaluate(){leftOP.evalutate()/rightOP.evaluate();}
-        virtual std::string stringify() {"( " << leftOP.stringify()<< "/" << rightOP.stringify()>>" )"; }
+        double evaluate(){return leftOP.evalutate()/rightOP.evaluate();}
+        std::string stringify();
     private:
 	Op leftOP;
 	Op rightOP;
