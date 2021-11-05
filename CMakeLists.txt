@@ -6,6 +6,8 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test
     unit_test.cpp
+    Div.cpp
+    Pow.cpp
 )
 ADD_EXECUTABLE(lab
 	main.cpp
