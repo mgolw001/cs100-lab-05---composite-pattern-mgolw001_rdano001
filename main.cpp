@@ -2,7 +2,7 @@
 
 #include "base.hpp"
 #include "op.hpp"
-#include "rand.hpp"
+#include "Rand.hpp"
 #include "Add.hpp"
 #include "Sub.hpp"
 #include "Mult.hpp"
