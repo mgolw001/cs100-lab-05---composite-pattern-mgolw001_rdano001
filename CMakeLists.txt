@@ -6,6 +6,7 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test
     unit_test.cpp
+    Div.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
