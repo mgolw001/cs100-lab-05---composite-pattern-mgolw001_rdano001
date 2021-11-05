@@ -1,10 +1,10 @@
 #include "Div.hpp"
-Div::Div(Op lop, Op rop){
+Div::Div(Base* lop, Base* rop){
 	leftOP = lop;
 	rightOP = rop;
 }
 
 std::string Div::stringify(){
-	std::string s = "( " + leftOP.stringify() + " / " + rightOP.stringify()+" )"; 
-	return std::s;
+	std::string s = "( " + leftOP->stringify() + " / " + rightOP->stringify()+" )"; 
+	return s;
 }

@@ -4,14 +4,15 @@
 #include "base.hpp"
 #include "op.hpp"
 #include <string>
-class Div : public Base : public Op {
+
+class Div : public Base {
     public:
-        Div(Op,Op);
-        double evaluate(){return leftOP.evalutate()/rightOP.evaluate();}
+        Div(Base*,Base*);
+        double evaluate(){return leftOP->evaluate()/rightOP->evaluate();}
         std::string stringify();
     private:
-	Op leftOP;
-	Op rightOP;
+	Base* leftOP;
+	Base* rightOP;
 };
 
 #endif 
