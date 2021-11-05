@@ -2,12 +2,18 @@
 #define __POW_HPP__
 
 #include "base.hpp"
+#include "math.h"
+#include "op.hpp"
+#include <string>
 
 class Pow : public Base {
     public:
-        Pow();
-        virtual double evaluate(){0.0;} //placeholder
-        virtual std::string stringify() { "**"; }//placeholder
+        Pow(Base*,Base*);
+        double evaluate(){pow(leftOP->evaluate(),rightOP->evaluate());} 
+        std::string stringify();
+    private:
+        Base*  leftOP;
+        Base*  rightOP;
 };
 
 #endif 
