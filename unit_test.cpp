@@ -9,6 +9,10 @@
 #include "Pow.hpp"
 #include "OneOPMock.hpp"
 #include "ThreeOPMock.hpp"
+#include "Add.hpp"
+#include "Sub.hpp"
+#include "Mult.hpp"
+
 TEST(DivideTest,DividingBySameNum){
        Base* dividend = new NegativeOPMock();
        Base* divisor = new NegativeOPMock();
@@ -31,6 +35,7 @@ TEST(DivideTest,DividingWithZero){
        Base* divide = new Div(dividend,divisor);
        double result = divide->evaluate();
        EXPECT_EQ(result,0);
+}
 
 TEST(PowTest,RaisedBySameNum){
        Base* bas = new ThreeOPMock();
