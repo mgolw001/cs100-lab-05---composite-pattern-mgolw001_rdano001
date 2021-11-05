@@ -7,7 +7,7 @@ Rand::Rand(){
 }
 
 std::string Rand::stringify(){
-	string s = to_string(val);
+	std::string s = std:: to_string(val);
 	return s;
 }
 
