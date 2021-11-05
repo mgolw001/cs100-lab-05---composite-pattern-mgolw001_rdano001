@@ -6,14 +6,14 @@
 #include "op.hpp"
 #include <string>
 
-class Pow : public Base : public Op {
+class Pow : public Base {
     public:
-        Pow(Op,Op);
-        double evaluate(){pow(leftOP.evaluate(),rightOP.evaluate());} 
+        Pow(Base*,Base*);
+        double evaluate(){pow(leftOP->evaluate(),rightOP->evaluate());} 
         std::string stringify();
     private:
-        Op leftOP;
-        Op rightOP;
+        Base*  leftOP;
+        Base*  rightOP;
 };
 
 #endif 
