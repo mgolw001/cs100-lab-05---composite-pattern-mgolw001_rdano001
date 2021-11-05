@@ -11,8 +11,8 @@ class Div : public Base {
         double evaluate(){return leftOP->evaluate()/rightOP->evaluate();}
         std::string stringify();
     private:
-	Base* leftOP;
-	Base* rightOP;
+	      Base* leftOP;
+	      Base* rightOP;
 };
 
 #endif 
