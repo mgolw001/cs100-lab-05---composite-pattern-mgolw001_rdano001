@@ -57,7 +57,79 @@ TEST(PowTest,RaisedByZero){
 
 }
 
+TEST(MultTest,MultiplyingBySameNum){
+       Base* element1 = new NegativeOPMock();
+       Base* element2 = new NegativeOPMock();
+       Base* multiply = new Mult(element1,element2);
+       double result = multiply->evaluate();
+       EXPECT_EQ(result,2.25);
+}
 
+TEST(MultTest,MultiplyingByDifNum){
+       Base* element1 = new NegativeOPMock();
+       Base* element2 = new SevenOPMock();
+       Base* multiply = new Mult(element1,element2);
+       double result = multiply->evaluate();
+       EXPECT_EQ(result,-11.25);
+}
+
+TEST(MultTest,MultiplyingWithZero){
+       Base* element1 = new ZeroOPMock();
+       Base* element2 = new SevenOPMock();
+       Base* multiply = new Mult(element1,element2);
+       double result = multiply->evaluate();
+       EXPECT_EQ(result,0);
+
+}
+TEST(AddTest,AddNegNums){
+       Base* element1 = new NegativeOPMock();
+       Base* element2 = new NegativeOPMock();
+       Base* add = new Add(element1,element2);
+       double result = add->evaluate();
+       EXPECT_EQ(result,-3.0);
+}
+
+TEST(AddTest,AddPosNums){
+       Base* element1 = new ThreeOPMock();
+       Base* element2 = new SevenOPMock();
+       Base* add = new Add(element1,element2);
+       double result = add->evaluate();
+       EXPECT_EQ(result,10.5);
+}
+
+TEST(AddTest,AddWithZero){
+       Base* element1 = new ZeroOPMock();
+       Base* element2 = new SevenOPMock();
+       Base* add = new Add(element1,element2);
+       double result = add->evaluate();
+       EXPECT_EQ(result,7.5);
+
+}
+
+TEST(SubTest,SubSameNegNums){
+       Base* element1 = new NegativeOPMock();
+       Base* element2 = new NegativeOPMock();
+       Base* subtract = new Sub(element1,element2);
+       double result = subtract->evaluate();
+       EXPECT_EQ(result,0);
+}
+
+TEST(SubTest,SubPosNums){
+       Base* element1 = new ThreeOPMock();
+       Base* element2 = new SevenOPMock();
+       Base* subtract = new Sub(element1,element2);
+       double result = subtract->evaluate();
+       EXPECT_EQ(result,-4.5);
+}
+
+TEST(SubTest,SubWithZero){
+       Base* element1 = new ZeroOPMock();
+       Base* element2 = new SevenOPMock();
+       Base* subtract = new Sub(element1,element2);
+       double result = subtract->evaluate();
+       EXPECT_EQ(result,-7.5);
+
+}
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
