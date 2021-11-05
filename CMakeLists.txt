@@ -9,6 +9,7 @@ ADD_EXECUTABLE(lab
 )
 ADD_EXECUTABLE(test
     unit_test.cpp
+    Div.cpp
     Pow.cpp
 )
 
